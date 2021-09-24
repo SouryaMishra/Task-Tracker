@@ -1,0 +1,108 @@
+.task-category{
+    min-height: 80vh;
+    border-radius: 8px;
+    padding: 0.5rem;
+    padding-top: 2.5rem;
+    position:relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--card-bg-color);
+    transition: all 0.3s linear;
+  }
+
+  .task-category-body{
+    transition: all 0.5s ease;
+    transform-origin: top center;
+  }
+  
+  .task-category.collapsed{
+    height:0;
+    min-height: 0;
+  }
+
+  .task-category.collapsed .task-category-body{
+    transform: scaleY(0);
+  }
+
+  @media screen and (max-width : 768px){
+    /* setting z indices so that menus won't be stacked under the next category in mobile mode*/
+    #todo{
+      z-index: 3;
+    }
+  
+    #in-progress{
+      z-index:2
+    }
+  
+    #completed{
+      z-index: 1
+    }
+
+  }
+
+  .task-category .task-category-header{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:80%;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:2;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .task-category .task-category-header .count{
+    position: absolute;
+    left:0;
+    top:0;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 2px 4px;
+    min-width: 18px;
+    text-align: center;
+    margin: 0 auto 0 8px;
+  }
+  
+  .task-category .task-category-header h1{
+    font-size: 14px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  .task-category-header .btn-toggle{
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+
+  .task-category-header .btn-toggle i{
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+  }
+
+  .task-category-header .btn-toggle:hover{
+    background-color: var(--primary-color);
+  }
+
+  .task-category-header .btn-toggle:hover i{
+    color: #fff;
+  }
+
+  .task-category.collapsed .btn-toggle i{
+    transform: rotate(180deg);
+  }
+
+  

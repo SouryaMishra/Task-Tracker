@@ -1,0 +1,99 @@
+.modal{
+    position: fixed;
+    inset:0;
+    background: rgba(10,10,10,0.8);
+    backdrop-filter: blur(2px);
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    z-index:999;
+}
+
+.modal-header{
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h1{
+    font-size:18px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.btn-close{
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    background: #fff;
+    border-radius: 4px;
+}
+
+.btn-close:hover{
+    color: #fff;
+    background: var(--hover-bg-color);
+}
+.modal-window{
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius:4px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(-400px);
+    transition: all 0.2s linear;
+}
+
+.modal-window.visible{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.modal-content{
+    padding: 1rem;
+}
+
+.modal-content .error-text{
+    margin-bottom: 1rem;
+    color: red;
+    font-size: var(--font-size);
+    text-align: left;
+}
+
+.form-edit .form-control{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-control label{
+    color: var(--text-color);
+    font-size: var(--font-size);
+}
+.form-control textarea, .form-edit select{
+    width:80%;
+    color: var(--text-color);
+}
+
+.form-control textarea{
+    resize: none;
+}
+
+.modal-footer{
+    height: 50px;
+    padding: 0.5rem;
+    padding-right:1rem;
+}
+.modal-footer .form-actions{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1
+}
+
+.btn.btn-cancel, .btn.btn-cancel:hover{
+    color: var(--text-color);
+    background: #fff;
+    margin-left: 0.5em;
+}
