@@ -10,7 +10,6 @@
   
  .btn-options:hover, .btn-options.active{
     background: var(--card-bg-color);
-    outline: 1px solid var(--text-color);
   }
   
   .btn-options i{
