@@ -11,7 +11,7 @@
       "id": "f8438d62-2b23-4043-8226-013c17646ed6",
       "title": "new 1",
       "priority": "Highest",
-      "status": 0,
+      "status": 1,
       "isSelected": false
     },
     {
@@ -73,7 +73,7 @@
     {
       "id": "633d6024-60ae-42ca-a011-191d1a078261",
       "title": "nnm",
-      "status": 0,
+      "status": 2,
       "priority": "Lowest",
       "isSelected": false
     }
